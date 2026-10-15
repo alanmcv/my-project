@@ -1,69 +1,70 @@
-import Image from "next/image";
+const features = [
+  {
+    title: "Rápido",
+    text: "Sitio estático generado con Next.js y servido desde la CDN de Firebase.",
+  },
+  {
+    title: "Automático",
+    text: "Cada push a main construye y publica el sitio con GitHub Actions.",
+  },
+  {
+    title: "Simple",
+    text: "Sin servidor que mantener: solo HTML, CSS y un poco de JavaScript.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div className="flex flex-1 flex-col font-sans">
+      <header className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-6">
+        <span className="text-lg font-semibold">MiProyecto</span>
+        <a href="#contacto" className="text-sm text-zinc-600 hover:text-foreground dark:text-zinc-400">
+          Contacto
+        </a>
+      </header>
+
+      <main className="flex flex-1 flex-col">
+        <section className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 px-6 py-24 text-center">
+          <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
+            Lanza tu idea a la web en minutos
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="max-w-xl text-lg text-zinc-600 dark:text-zinc-400">
+            Una landing page simple hecha con Next.js, desplegada en Firebase Hosting.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#features"
+            className="rounded-full bg-foreground px-6 py-3 font-medium text-background transition-opacity hover:opacity-80"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            Ver más
           </a>
+        </section>
+
+        <section id="features" className="bg-zinc-50 py-20 dark:bg-zinc-900">
+          <div className="mx-auto grid w-full max-w-5xl gap-6 px-6 sm:grid-cols-3">
+            {features.map((f) => (
+              <div key={f.title} className="rounded-2xl bg-background p-6 shadow-sm">
+                <h2 className="mb-2 text-xl font-semibold">{f.title}</h2>
+                <p className="text-zinc-600 dark:text-zinc-400">{f.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="contacto" className="mx-auto flex w-full max-w-5xl flex-col items-center gap-4 px-6 py-20 text-center">
+          <h2 className="text-3xl font-bold">¿Hablamos?</h2>
+          <p className="text-zinc-600 dark:text-zinc-400">Escríbeme y te respondo pronto.</p>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:alancadena1@upb.edu"
+            className="rounded-full border border-zinc-300 px-6 py-3 font-medium transition-colors hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
           >
-            Documentation
+            Enviar correo
           </a>
-        </div>
+        </section>
       </main>
+
+      <footer className="py-6 text-center text-sm text-zinc-500">
+        © {new Date().getFullYear()} MiProyecto
+      </footer>
     </div>
   );
 }
