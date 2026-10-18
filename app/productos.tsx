@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 // Se fija al hacer `npm run build`. Para usar el backend local: NEXT_PUBLIC_API_URL=http://localhost:3000
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://backendupbtest.onrender.com";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://backendupbtest-gp4v.onrender.com";
 
 type Producto = { id: number; nombre: string; precio: number; stock: number; createdAt: string };
 type Form = { nombre: string; precio: string; stock: string };

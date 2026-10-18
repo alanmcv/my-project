@@ -3,7 +3,7 @@
 Frontend en Next.js (exportación estática) desplegado en Firebase Hosting. Consume la API de productos desplegada en Render.
 
 - **Frontend en producción:** https://test2-9f047.web.app
-- **API (backend):** https://backendupbtest.onrender.com ([repositorio](https://github.com/alanmcv/backendUpbtest))
+- **API (backend):** https://backendupbtest-gp4v.onrender.com ([repositorio](https://github.com/alanmcv/backendUpbtest))
 
 > El backend está en el plan gratis de Render: si estaba dormido, la primera carga puede tardar ~1 minuto.
 
