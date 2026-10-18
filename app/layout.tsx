@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "MiProyecto",
-  description: "Landing page hecha con Next.js y Firebase Hosting",
+  description: "CRUD de productos: Next.js en Firebase + API Express en Render",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
