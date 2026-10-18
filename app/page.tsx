@@ -1,19 +1,16 @@
-import Productos from "./productos";
+import { API_URL } from "./api";
+import Inventario from "./productos";
 
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col font-sans">
-      <header className="mx-auto w-full max-w-5xl px-6 pt-8">
-        <h1 className="text-3xl font-bold tracking-tight">Productos</h1>
-        <p className="text-zinc-600 dark:text-zinc-400">Frontend en Firebase Hosting · Backend en Render</p>
-      </header>
-
       <main className="flex flex-1 flex-col">
-        <Productos />
+        <Inventario />
       </main>
 
-      <footer className="py-6 text-center text-sm text-zinc-500">
-        © {new Date().getFullYear()} MiProyecto
+      <footer className="border-t border-zinc-200 py-6 text-center text-xs text-zinc-500 dark:border-zinc-800">
+        <p>Frontend: Next.js en Firebase Hosting · Backend: Express + PostgreSQL en Render</p>
+        <p className="mt-1 font-mono">API: {API_URL}</p>
       </footer>
     </div>
   );

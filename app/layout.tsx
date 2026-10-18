@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MiProyecto",
+  title: "Inventario",
   description: "CRUD de productos: Next.js en Firebase + API Express en Render",
 };
 

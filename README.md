@@ -9,7 +9,19 @@ Frontend en Next.js (exportación estática) desplegado en Firebase Hosting. Con
 
 ## Funcionalidades
 
-Listar, buscar por nombre, filtrar agotados, crear, editar y eliminar productos (`app/productos.tsx`).
+- Tarjetas con el resumen del inventario: productos, unidades, valor total y agotados.
+- Tabla de productos con búsqueda por nombre, filtro por categoría y "solo agotados" (combinables).
+- Crear y editar productos en una ventana modal (nombre, descripción, precio, stock, categoría).
+- Gestión de categorías: agregar, renombrar y eliminar.
+- Indicador de conexión con la API, notificaciones, modo oscuro automático y diseño adaptable a celular.
+
+| Archivo | Qué hace |
+|---|---|
+| `app/api.ts` | URL de la API, tipos y función `api()` para hacer las peticiones |
+| `app/productos.tsx` | Panel principal: resumen, filtros y tabla |
+| `app/producto-form.tsx` | Modal para crear/editar un producto |
+| `app/categorias-dialog.tsx` | Modal para gestionar categorías |
+| `app/ui.tsx` | Estilos e iconos compartidos |
 
 ## Correr en local
 
